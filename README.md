@@ -1,1 +1,1 @@
-# techskills-website
+# TECHSKILLS

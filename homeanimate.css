@@ -1,0 +1,10 @@
+.animate__animated{
+    animation-duration:1.5s;
+}
+.card-group , .our-team , .column-1 , .column-2{
+    opacity: 0;
+}
+
+.card-group.animate__animated , .our-team.animate__animated , .column-1.animate__animated , .column-2.animate__animated{
+    opacity: 1;
+}

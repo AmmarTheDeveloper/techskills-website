@@ -1,0 +1,14 @@
+.loading{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    background:white  url('https://media.tenor.com/YPOStjIfQ2IAAAAM/loading-waiting.gif') center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    overflow-y:hidden !important;
+}

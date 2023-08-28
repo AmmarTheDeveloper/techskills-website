@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- own css -->
+    <link rel="stylesheet" href="about.css">
+    <!-- font-awesome-cdn-link -->
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="loading">
+        <div class="spinning"></div>
+    </div>
+    <nav id="navbar" class="navbar sticky">
+        <div id="logo">
+            <h1>Tech<span class="skill-color">skills</span></h1>
+        </div>
+        <!-- nav design start -->
+        <section id="nav" class="nav">
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars fa-2x" id="navbar-toggler" class="navbar-toggler"></i>
+            </div>
+            <ul class="nav-menu">
+                <li id="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li id="nav-item"><a href="about.html" class="nav-link active">About us</a></li>
+                <li id="nav-item"><a href="testimonial.html" class="nav-link">Student Testimonial</a></li>
+                <li id="nav-item">
+                    <span class="nav-link drop">
+                        <i class="fa-solid fa-angle-up angle-up"></i><i class="fa-solid fa-angle-down angle-down"></i>
+                        more</span>
+                </li>
+                <!-- dropdown section start after nav-->
+                <section class="dropdown">
+                    <ul class="dropdown-menu">
+                        <li id="-dropdown-item"><a href="image.html" class="dropdown-link">Images</a></li>
+                        <li id="dropdown-item"><a href="" class="dropdown-link">english academy</a></li>
+                        <li id="dropdown-item"><a href="" class="dropdown-link">human resources</a></li>
+                        <li id="dropdown-item"><a href="" class="dropdown-link">financial education</a></li>
+                        <li id="dropdown-item"><a href="" class="dropdown-link">digital marketing</a></li>
+                    </ul>
+                </section>
+                <button type="button" class="lecture-btn"><a href="tel:+919892564710">Demo Lecture</a></button>
+            </ul>
+        </section>
+    </nav>
+    <!-- home section starts here -->
+    <section class="about" id="about">
+        <div class="about-child">
+            <div class="column column-1">
+                <h1 class="heading">Tech Skills</h1>
+                <p class="about-text">
+                    “Tech skills” is an establishment of a learning space, where a group of educators work together in a
+                    positive domain to enhance the quality of the learners in all the favorable aspects. Student’s
+                    booming growth is all that which we aim for.
+                </p>
+                <p>We are that ladder of the learner from where one can find their way to achieve their triumph.
+                    Decoding the conundrum of a career is where the person feels confused the most. And at that moment,
+                    we work for you like icing on the cake.</p>
+                <p>
+                    We ensure that our students gain all the potential to achieve the aim for which they were seeking.
+                    With Job availability as per your interest of work is one of the perk advantages of our academy.
+                    above all of these factors, our main purpose is to bring curiosity in the learner about learning new
+                    skills and maintain a healthy educating environment.
+                </p>
+            </div>
+            <div class="column column-2">
+                <img src="./images/student.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- our mission starts here -->
+    <section class="address" id="address">
+        <h1 class="heading">About us</h1>
+        <div class="address-container">
+            <div class="column column-1">
+                <i class="fa-solid fa-house fa-3x icon"></i>
+                <h2>Address</h2>
+                <p>Sakinaka 90 feet road near metro station suburban Mumbai 400072</p>
+            </div>
+            <div class="column column-2">
+                <i class="fa-solid fa-envelope fa-3x"></i>
+                <h2>Email</h2>
+                <p>
+                    techskills@gmail.com
+                </p>
+                <p>
+                    techskills123@gmail.com
+                </p>
+                <p>
+                    techskills6435@gmail.com
+                </p>
+            </div>
+            <div class="column column-3">
+                <i class="fa-solid fa-mobile fa-3x"></i>
+                <h2>Phone no</h2>
+                <p>
+                    +919892564710
+                </p>
+                <p>
+                    +919892564710
+                </p>
+                <p>
+                    +919892564710
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer-container">
+        <div class="footer">
+            <div class="column column-1">
+                <p>Copyright &copy; by Tech Skills || Designed & Developed by <a href="#" class="ammar">ammar</a></p>
+            </div>
+        </div>
+   </footer>
+   <!-- scrolltop section starts here -->
+   <a href="#about" class="scrolltop"><i class="fa-solid fa-angle-up"></i></a>
+    <!-- script starts here -->
+   <script src="loading.js"></script>
+   <script>
+        const body = document.querySelector('body');
+        const navbar = document.querySelector('#navbar');
+        const nav = document.querySelector('#nav');
+        const menuBtn = document.querySelector('.menu-btn');
+        const cancelBtn = document.querySelector('.navbar-close');
+        const navMenu = document.querySelector('.nav-menu');
+        const scrolltop = document.querySelector('.scrolltop');
+        // lecture button designing
+        const lectureBtn = document.querySelector('.lecture-btn');
+        menuBtn.onclick = () => {
+            body.classList.toggle('disabled-scroll');
+            lectureBtn.classList.toggle('hidden');
+            nav.classList.toggle('active');
+        }
+        window.onscroll = () => {
+            body.classList.remove('disabled-scroll');
+            lectureBtn.classList.remove('hidden');
+            nav.classList.remove('active');
+            dropdown.classList.remove('active');
+            this.scrollY > 40? scrolltop.classList.add('active'): scrolltop.classList.remove('active');
+        }
+        ///////////////////dropdown///////////////////////////////////////////////////////////////
+        const drop = document.querySelector('.drop');
+        const dropdown = document.querySelector('.dropdown');
+        // dropdown angle up and down
+        const angleUp = document.querySelector('.angle-up');
+        const angleDown = document.querySelector('.navbar .angle-down');
+        /////////////////////////////////////////////////////////
+        drop.onclick = () => {
+            dropdown.classList.toggle('active');
+            angleUp.classList.toggle('hide');
+            angleDown.classList.toggle('visible');
+            //////////////////////////////for not disturbance of navs contents//////////////////////////////////////
+            navMenu.classList.toggle('active');
+        }
+
+    </script>
+</body>
+
+</html>
